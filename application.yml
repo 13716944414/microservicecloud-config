@@ -1,15 +1,27 @@
 ﻿spring:
   profiles:
-    active: dev
+    active: test
 ---
-
 spring:
-  profiles: dev #开发环境
+  profiles: dev
   application:
     name: microservicecloud-config-dev
-
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:13716944414/microservicecloud-config.git #GitHub上面的git仓库名字
+server:
+  port: 1111
 ---
 spring:
-  profiles: test #测度环境
+  profiles: test
   application:
     name: microservicecloud-config-test
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:13716944414/microservicecloud-config.git #GitHub上面的git仓库名字
+server:
+  port: 2222
