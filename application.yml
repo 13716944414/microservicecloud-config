@@ -11,8 +11,6 @@ spring:
       server:
         git:
           uri: git@github.com:13716944414/microservicecloud-config.git #GitHub上面的git仓库名字
-server:
-  port: 1111
 ---
 spring:
   profiles: test
@@ -23,5 +21,3 @@ spring:
       server:
         git:
           uri: git@github.com:13716944414/microservicecloud-config.git #GitHub上面的git仓库名字
-server:
-  port: 2222
